@@ -10,9 +10,9 @@ This repository contains introductory level SNN examples that I built to underst
 ## Setup
 ### Software
 #### Necessary Python Packages
-* [sPyNNaker8](https://github.com/SpiNNakerManchester/sPyNNaker8)
+* [sPyNNaker8](https://github.com/SpiNNakerManchester/sPyNNaker8)*
 * matplotlib (2.2.3)
-* PyNN (0.9.3)*
+* PyNN (0.9.3)**
 * numpy (1.16.0)
 
 Along with Python 2.7.
@@ -21,26 +21,28 @@ Along with Python 2.7.
 
 ```
 spynnaker-examples/
-├── compare_voltages.png
 ├── compare_voltages.py
 ├── empty_snn_pattern.py
 ├── izhikevich_snn.py
 ├── one_neuron_if_curr_exp.py
 ├── one_neuron_izhikevich.py
 ├── recurrent_network.py
+├── scripts
+│   ├── install_spynnaker.sh
+│   └── uninstall_spynnaker.sh
 ├── snn_if_cond_exp.py
 ├── snn_if_curr_alpha.py
 ├── snn_if_curr_exp.py
 └── util
     ├── basic_visualizer.py
-    ├── basic_visualizer.pyc
-    ├── __init__.py
-    └── __init__.pyc
+    └── __init__.py
 ```
 
 Each python file could be run separately except *basic_visualizer.py* and *empty_snn_pattern.py*. 
 
 Folder _util_ includes utility library *basic_visualizer* which contains plotting functions.
+
+Folder _scripts_* includes bash scripts to install and uninstall pip based _sPyNNaker_ packages.
 
 *empty_snn_pattern.py* is a pattern python file which is reproducible by filling the sections. I built this as a template for my codes.
 
@@ -59,5 +61,7 @@ SpiNNaker neuromorphic hardware resource is used in this project. Please refer t
 
 **Notes**
 
-*You can run these examples on a different neuromorphic hardware resource or a simulator as well. Please see [PyNN documentation](http://neuralensemble.org/PyNN/) for alternatives.
+*There is also a python package of _sPyNNaker_ available on pip. However, the GitHub repository of the _sPyNNaker_ is more comprehensive and up-to-date than the pip version. If you'd lke to install _sPyNNaker_ via pip, you may refer to my scripts in the _scripts_ folder.
+
+**You can run these examples on a different neuromorphic hardware resource or a simulator as well. Please see [PyNN documentation](http://neuralensemble.org/PyNN/) for alternatives.
 
